@@ -76,7 +76,9 @@ model Staff {
 model Menu {
   id           String        @id @default(cuid())
   name         String
+  englishName  String?
   description  String?
+  imageUrl     String?
   price        Int
   durationMin  Int
   isActive     Boolean       @default(true)

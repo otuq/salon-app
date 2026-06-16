@@ -1,0 +1,37 @@
+import Image from 'next/image'
+import { Button } from '../ui/button'
+
+export function ConceptSection() {
+  return (
+    <section id="concept" className="bg-[#f7f3ed] py-32">
+      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+        <div className="relative h-[500px] overflow-hidden rounded-sm">
+          <Image
+            src="/image/home/concept.png"
+            alt="サロンイメージ"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col justify-center">
+          <p className="font-cormorant text-muted-foreground text-sm tracking-[0.4em]">
+            CONCEPT
+          </p>
+          <h2 className="mt-6 text-4xl leading-relaxed">
+            毎日が少し楽しくなる
+            <br />
+            ヘアデザインを
+          </h2>
+          <p className="text-muted-foreground mt-10 leading-9">
+            お客様一人ひとりの髪質やライフスタイルに寄り添い、
+            再現性の高いスタイルをご提案します。 サロン帰りだけでなく、
+            ご自宅でも扱いやすいデザインを大切にしています。
+          </p>
+          <Button variant="outline" className="mt-10 w-fit">
+            About us
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
