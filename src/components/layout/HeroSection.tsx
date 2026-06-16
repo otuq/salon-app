@@ -39,12 +39,12 @@ export function HeroSection() {
                 </a>
               </li>
               <li className="border-x border-black px-6">
-                <a href="#stylist" className="hover:opacity-50">
+                <a href="#staff" className="hover:opacity-50">
                   Stylist
                 </a>
               </li>
               <li className="px-6">
-                <a href="#reservations" className="hover:opacity-50">
+                <a href="#reservation" className="hover:opacity-50">
                   Reservation
                 </a>
               </li>
@@ -61,7 +61,7 @@ export function HeroSection() {
             </ul>
           </nav>
 
-          <Button asChild className="bg-[#000000a1] p-5">
+          <Button asChild className="bg-[#000000aa] px-10 py-6">
             <Link href="/reservation">🗓️ ご予約はこちら</Link>
           </Button>
         </div>
@@ -84,7 +84,7 @@ export function HeroSection() {
             再現性の高いヘアデザインをご提案します。
           </p>
 
-          <Button asChild className="mt-10 bg-[#000000aa] p-5">
+          <Button asChild className="mt-10 bg-[#000000aa] px-10 py-6">
             <Link href="/reservation">ご予約はこちら　→</Link>
           </Button>
         </div>

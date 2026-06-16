@@ -15,7 +15,7 @@ export function MenuImageDialog({ src, alt }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className="relative h-36 w-48 shrink-0 overflow-hidden rounded-lg">
+        <button className="relative ml-6 h-36 w-48 shrink-0 cursor-pointer overflow-hidden rounded-lg">
           <Image
             src={src}
             alt={alt}

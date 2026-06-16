@@ -27,9 +27,7 @@ export function MenuCard({
         <p className="text-muted-foreground text-[10px]">{name}</p>
       </div>
       <div className="flex">
-        <div className="relative ml-6 h-36 w-48 shrink-0 overflow-hidden">
-          <MenuImageDialog src={imgSrc} alt={name} />
-        </div>
+        <MenuImageDialog src={imgSrc} alt={name} />
         <CardContent className="text-muted-foreground leading-6">
           {description}
         </CardContent>

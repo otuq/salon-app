@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { Button } from '../ui/button'
+import Link from 'next/link'
 
 export function ConceptSection() {
   return (
-    <section id="concept" className="bg-[#f7f3ed] py-32">
+    <section id="concept" className="bg-[#f7f3ed] p-32">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-        <div className="relative h-[500px] overflow-hidden rounded-sm">
+        <div className="relative h-125 overflow-hidden rounded-sm">
           <Image
             src="/image/home/concept.png"
             alt="サロンイメージ"
@@ -27,8 +28,8 @@ export function ConceptSection() {
             再現性の高いスタイルをご提案します。 サロン帰りだけでなく、
             ご自宅でも扱いやすいデザインを大切にしています。
           </p>
-          <Button variant="outline" className="mt-10 w-fit">
-            About us
+          <Button asChild variant="outline" className="mt-10 w-fit px-10 py-6">
+            <Link href="/">About us</Link>
           </Button>
         </div>
       </div>

@@ -9,7 +9,7 @@ export async function MenuSection() {
     },
   })
   return (
-    <section id="menu" className="bg-[#f7f3ed] py-32">
+    <section id="menu" className="py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto flex flex-col items-center justify-center">
           <p className="text-muted-foreground font-cormorant text-sm tracking-[0.4em]">

@@ -12,11 +12,19 @@ async function main() {
     },
   })
 
-  const customerUser = await prisma.user.create({
+  const customerUser1 = await prisma.user.create({
     data: {
       name: '山田 花子',
-      email: 'customer@example.com',
+      email: 'customer1@example.com',
       phone: '090-1111-1111',
+      role: Role.CUSTOMER,
+    },
+  })
+  const customerUser2 = await prisma.user.create({
+    data: {
+      name: '前田 太郎',
+      email: 'customer2@example.com',
+      phone: '090-2222-2222',
       role: Role.CUSTOMER,
     },
   })
@@ -39,13 +47,22 @@ async function main() {
     },
   })
 
+  const staffUser3 = await prisma.user.create({
+    data: {
+      name: '川口 達郎',
+      email: 'kawaguchi@example.com',
+      phone: '090-4444-4444',
+      role: Role.STAFF,
+    },
+  })
+
   const staff1 = await prisma.staff.create({
     data: {
       userId: staffUser1.id,
       displayName: '佐藤 美咲',
       position: 'トップスタイリスト　代表',
       bio: 'ショートカットと透明感カラーが得意です。',
-      imageUrl: '/staff/sato.jpg',
+      imageUrl: '/image/staff/sato.png',
     },
   })
 
@@ -53,9 +70,19 @@ async function main() {
     data: {
       userId: staffUser2.id,
       displayName: '鈴木 健太',
-      position: 'トップスタイリスト',
+      position: 'シニアスタイリスト',
       bio: 'メンズカットとパーマスタイルが得意です。',
-      imageUrl: '/staff/suzuki.jpg',
+      imageUrl: '/image/staff/suzuki.png',
+    },
+  })
+
+  const staff3 = await prisma.staff.create({
+    data: {
+      userId: staffUser3.id,
+      displayName: '川口 達郎',
+      position: 'スタイリスト',
+      bio: 'ヘッドスパとトリートメンケアが得意です。',
+      imageUrl: '/image/staff/kawaguchi.png',
     },
   })
 
@@ -132,32 +159,31 @@ async function main() {
 
   await prisma.reservation.create({
     data: {
-      customerId: customerUser.id,
+      customerId: customerUser1.id,
       staffId: staff1.id,
-      menuId: cut.id,
+      menuId: color.id,
       startTime: tomorrow,
       endTime: reservationEnd,
       status: ReservationStatus.CONFIRMED,
-      note: '前髪は短めにしたいです。',
+      note: '明るすぎないブラウン系で相談したいです。',
     },
   })
 
   const anotherStart = new Date()
   anotherStart.setDate(anotherStart.getDate() + 2)
   anotherStart.setHours(13, 0, 0, 0)
-
   const anotherEnd = new Date(anotherStart)
   anotherEnd.setMinutes(anotherEnd.getMinutes() + color.durationMin)
 
   await prisma.reservation.create({
     data: {
-      customerId: customerUser.id,
+      customerId: customerUser2.id,
       staffId: staff2.id,
-      menuId: color.id,
-      startTime: anotherStart,
-      endTime: anotherEnd,
-      status: ReservationStatus.PENDING,
-      note: '明るすぎないブラウン系で相談したいです。',
+      menuId: cut.id,
+      startTime: tomorrow,
+      endTime: reservationEnd,
+      status: ReservationStatus.CONFIRMED,
+      note: '前髪は短めにしたいです。',
     },
   })
 
