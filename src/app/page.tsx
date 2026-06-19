@@ -7,7 +7,7 @@ import { StaffSection } from '@/components/layout/StaffSection'
 
 export default function HomePage() {
   return (
-    <main className="bg-[#f7f3ed]">
+    <main className='bg-[#f7f3ed]'>
       <HeroSection />
       <ConceptSection />
       <MenuSection />

@@ -1,17 +1,16 @@
-import type { Metadata } from "next"
-import { Noto_Serif_JP, Cormorant_Garamond } from "next/font/google"
-import "./globals.css"
-
+import type { Metadata } from 'next'
+import { Noto_Serif_JP, Cormorant_Garamond } from 'next/font/google'
+import './globals.css'
 
 const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
 })
 const notoSerifJp = Noto_Serif_JP({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-  variable: "--font-noto-serif-jp",
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-noto-serif-jp',
 })
 
 // const playfair = Playfair_Display({
@@ -21,8 +20,8 @@ const notoSerifJp = Noto_Serif_JP({
 // })
 
 export const metadata: Metadata = {
-  title: "Hair Salon",
-  description: "美容室予約サイト",
+  title: 'Hair Salon',
+  description: '美容室予約サイト',
 }
 
 export default function RootLayout({
@@ -31,8 +30,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" className="scroll-smooth">
-      <body className={`${notoSerifJp.variable} ${cormorant.variable} font-serif`}>
+    <html lang='ja' className='scroll-smooth'>
+      <body
+        className={`${notoSerifJp.variable} ${cormorant.variable} font-serif`}
+      >
         {children}
       </body>
     </html>

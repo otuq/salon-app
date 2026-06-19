@@ -1,36 +1,39 @@
 import Image from 'next/image'
-import { Button } from '../ui/button'
-import Link from 'next/link'
+import { ArrowButton } from '@/components/ui/arrow-button'
 
 export function ConceptSection() {
   return (
-    <section id="concept" className="bg-[#f7f3ed] p-32">
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-        <div className="relative h-125 overflow-hidden rounded-sm">
+    <section id='concept' className='bg-[#f7f3ed] pt-32'>
+      <div className='mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2 md:items-start'>
+        <div className='relative aspect-square overflow-hidden rounded-sm'>
           <Image
-            src="/image/home/concept.png"
-            alt="サロンイメージ"
+            src='/image/home/concept.png'
+            alt='サロンイメージ'
             fill
-            className="object-cover"
+            className='object-cover'
           />
         </div>
-        <div className="flex flex-col justify-center">
-          <p className="font-cormorant text-muted-foreground text-sm tracking-[0.4em]">
+        <div className='flex flex-col items-center md:items-start'>
+          <p className='font-cormorant text-muted-foreground text-center text-sm tracking-[0.4em] md:text-start'>
             CONCEPT
           </p>
-          <h2 className="mt-6 text-4xl leading-relaxed">
+          <h2 className='mt-6 text-3xl leading-relaxed md:text-4xl'>
             毎日が少し楽しくなる
             <br />
             ヘアデザインを
           </h2>
-          <p className="text-muted-foreground mt-10 leading-9">
+          <p className='text-muted-foreground mt-10 leading-9'>
             お客様一人ひとりの髪質やライフスタイルに寄り添い、
             再現性の高いスタイルをご提案します。 サロン帰りだけでなく、
             ご自宅でも扱いやすいデザインを大切にしています。
           </p>
-          <Button asChild variant="outline" className="mt-10 w-fit px-10 py-6">
-            <Link href="/">About us</Link>
-          </Button>
+          <ArrowButton
+            href='/'
+            variant={'outline'}
+            children='About us'
+            className='mt-10 w-fit px-10 py-6'
+            textClassName=''
+          />
         </div>
       </div>
     </section>

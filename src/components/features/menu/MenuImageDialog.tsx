@@ -15,26 +15,26 @@ export function MenuImageDialog({ src, alt }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className="relative ml-6 h-36 w-48 shrink-0 cursor-pointer overflow-hidden rounded-lg">
+        <button className='relative ml-6 h-36 w-48 shrink-0 cursor-pointer overflow-hidden rounded-lg'>
           <Image
             src={src}
             alt={alt}
             fill
-            className="object-cover object-center transition-transform duration-300 hover:scale-105"
+            className='object-cover object-center transition-transform duration-300 hover:scale-105'
           />
         </button>
       </DialogTrigger>
-      <DialogContent className="fixed! inset-0! top-0! left-0! h-screen! w-screen! max-w-none! translate-x-0! translate-y-0! rounded-none border-none bg-[#00000099] shadow-none [&>button]:hidden">
+      <DialogContent className='fixed! inset-0! top-0! left-0! h-screen! w-screen! max-w-none! translate-x-0! translate-y-0! rounded-none border-none bg-[#00000099] shadow-none [&>button]:hidden'>
         <div
-          className="flex h-full w-full items-center justify-center"
+          className='flex h-full w-full items-center justify-center'
           onPointerDown={() => setOpen(false)}
         >
-          <div className="relative h-full w-full max-w-5xl">
+          <div className='relative h-full w-full max-w-5xl'>
             <Image
               src={src}
               alt={alt}
               fill
-              className="object-contain object-center"
+              className='object-contain object-center'
             />
           </div>
         </div>

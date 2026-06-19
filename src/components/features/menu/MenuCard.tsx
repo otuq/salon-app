@@ -1,5 +1,4 @@
 import { Card, CardContent, CardFooter, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
 import { MenuImageDialog } from './MenuImageDialog'
 
 type MenuCardProps = {
@@ -19,21 +18,21 @@ export function MenuCard({
 }: MenuCardProps) {
   const imgSrc = imageUrl || '/image/home/no-image.png'
   return (
-    <Card className="overflow-hidden">
-      <div className="mx-auto ml-6 flex flex-col items-center justify-center">
-        <CardTitle className="font-cormorant text-2xl tracking-widest">
+    <Card className='overflow-hidden'>
+      <div className='mx-auto ml-6 flex flex-col items-center justify-center'>
+        <CardTitle className='font-cormorant text-2xl tracking-widest'>
           {englishName}
         </CardTitle>
-        <p className="text-muted-foreground text-[10px]">{name}</p>
+        <p className='text-muted-foreground text-[10px]'>{name}</p>
       </div>
-      <div className="flex">
+      <div className='flex'>
         <MenuImageDialog src={imgSrc} alt={name} />
-        <CardContent className="text-muted-foreground leading-6">
+        <CardContent className='text-muted-foreground leading-6'>
           {description}
         </CardContent>
       </div>
       <CardFooter>
-        <p className="font-cormorant text-2xl">¥{price.toLocaleString()}</p>
+        <p className='font-cormorant text-2xl'>¥{price.toLocaleString()}</p>
       </CardFooter>
     </Card>
   )
