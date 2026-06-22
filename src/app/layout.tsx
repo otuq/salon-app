@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='ja' className='scroll-smooth'>
+    <html lang='ja'>
       <body
         className={`${notoSerifJp.variable} ${cormorant.variable} font-serif`}
       >

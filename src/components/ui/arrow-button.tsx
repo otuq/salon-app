@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import styles from '@/app/style.module.css'
 
 interface ArrowButtonProps extends React.ComponentProps<typeof Button> {
   href: string
@@ -24,7 +25,11 @@ export function ArrowButton({
       asChild
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
-      className={cn('px-10 py-6', className)}
+      className={cn(
+        'border-none px-4 py-6 md:px-10',
+        styles.transparentLeft,
+        className,
+      )}
       {...props}
     >
       <Link href={href}>

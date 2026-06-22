@@ -1,6 +1,12 @@
+import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
-export function Logo({ href }: { href?: string }) {
+type Props = {
+  href?: string
+  className?: string
+}
+
+export function Logo({ href, className }: Props) {
   const content = (
     <div className='flex flex-col items-center'>
       <p className='font-cormorant text-4xl tracking-widest'>Lueur</p>
@@ -8,7 +14,7 @@ export function Logo({ href }: { href?: string }) {
     </div>
   )
   return href ? (
-    <Link href={href} className='shrink-0'>
+    <Link href={href} className={cn('shrink-0', className)}>
       {content}
     </Link>
   ) : (

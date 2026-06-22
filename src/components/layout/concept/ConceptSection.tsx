@@ -27,13 +27,6 @@ export function ConceptSection() {
             再現性の高いスタイルをご提案します。 サロン帰りだけでなく、
             ご自宅でも扱いやすいデザインを大切にしています。
           </p>
-          <ArrowButton
-            href='/'
-            variant={'outline'}
-            children='About us'
-            className='mt-10 w-fit px-10 py-6'
-            textClassName=''
-          />
         </div>
       </div>
     </section>

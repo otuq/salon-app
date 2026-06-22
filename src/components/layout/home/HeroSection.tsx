@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/app/style.module.css'
-import { cn } from '@/lib/utils'
-import { DesktopHeader } from './DesktopHeader'
-import { MobileHeader } from './MobileHeader'
+import { DesktopNav } from './DesktopNav'
+import { MobileNav } from './MobileNav'
+import { FixedHeader } from './FixedHeader'
 
 export function HeroSection() {
   return (
@@ -15,19 +14,15 @@ export function HeroSection() {
         priority
         className='object-cover object-[70%_center] md:object-cover'
       />
-
       <div className='absolute inset-0 bg-white/40' />
-      <header className='fixed top-0 z-50 w-full'>
-        <div className={cn('absolute inset-0', styles.transparentBottom)} />
-        <div className='relative mx-auto max-w-7xl px-6 py-6'>
-          <div className='hidden md:block'>
-            <DesktopHeader />
-          </div>
-          <div className='md:hidden'>
-            <MobileHeader />
-          </div>
+      <FixedHeader>
+        <div className='hidden md:block'>
+          <DesktopNav />
         </div>
-      </header>
+        <div className='md:hidden'>
+          <MobileNav />
+        </div>
+      </FixedHeader>
       <div className='relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-6'>
         <div className='w-full'>
           <h1
@@ -37,7 +32,6 @@ export function HeroSection() {
             <br />
             ヘアスタイルを
           </h1>
-
           <p
             className={`${styles.textOutline} text-muted-foreground mt-8 leading-8`}
           >

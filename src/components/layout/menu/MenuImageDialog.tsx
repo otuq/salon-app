@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { cn } from '@/lib/utils'
 
 type Props = {
   src: string
@@ -15,7 +16,11 @@ export function MenuImageDialog({ src, alt }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button className='relative ml-6 h-36 w-48 shrink-0 cursor-pointer overflow-hidden rounded-lg'>
+        <button
+          className={cn(
+            'relative aspect-square w-64 cursor-pointer overflow-hidden rounded-lg',
+          )}
+        >
           <Image
             src={src}
             alt={alt}

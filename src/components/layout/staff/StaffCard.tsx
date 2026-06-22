@@ -6,9 +6,10 @@ type StaffCardProps = {
   displayName: string
   imageUrl: string | null
   bio: string | null
+  id?: string
 }
 
-export function StaffCard({ displayName, imageUrl, bio }: StaffCardProps) {
+export function StaffCard({ displayName, imageUrl, bio, id }: StaffCardProps) {
   const imgSrc = imageUrl || '/image/home/no-image.png'
   return (
     <Card className='overflow-hidden'>
@@ -16,20 +17,18 @@ export function StaffCard({ displayName, imageUrl, bio }: StaffCardProps) {
         <div className='relative ml-6 h-48 w-36 shrink-0 overflow-hidden rounded-lg'>
           <Image alt={displayName} fill src={imgSrc} className='object-cover' />
         </div>
-        <div className='flex flex-col items-end justify-between'>
-          <CardContent className='text-muted-foreground leading-6'>
-            <p className='font-cormorant text-[15px] tracking-widest'>
-              {displayName}
-            </p>
-            {bio}
-          </CardContent>
+        <CardContent className='text-muted-foreground m-0 flex flex-col leading-6'>
+          <p className='font-cormorant text-[15px] tracking-widest'>
+            {displayName}
+          </p>
+          <p>{bio}</p>
           <ArrowButton
-            href='/staff'
+            href={`/staff/${id}`}
             children='more'
-            className='mr-6 bg-[#000000aa] px-5 py-4'
+            className='mt-auto self-end bg-[#000000aa] py-4 md:px-5'
             textClassName='font-cormorant text-[15px] tracking-widest'
           />
-        </div>
+        </CardContent>
       </div>
     </Card>
   )

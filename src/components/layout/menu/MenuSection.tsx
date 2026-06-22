@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
-import { MenuCard } from '../features/menu/MenuCard'
-import { ArrowButton } from '../ui/arrow-button'
-import { Description } from './Description'
+import { MenuCard } from './MenuCard'
+import { SectionHeading } from '../home/SectionHeading'
+import { ArrowButton } from '@/components/ui/arrow-button'
 
 export async function MenuSection() {
   const menus = await prisma.menu.findMany({
@@ -14,12 +14,12 @@ export async function MenuSection() {
     <section id='menu' className='py-32'>
       <div className='mx-auto max-w-7xl px-6'>
         <div className='flex flex-col items-center justify-center'>
-          <Description
+          <SectionHeading
             englishTitle='MENU'
             title='人気メニュー'
             description='髪質やライフスタイルに合わせて、扱いやすく自然なスタイルをご提案します。'
-          ></Description>
-          <div className='mt-16 grid gap-8 md:grid-cols-3'>
+          ></SectionHeading>
+          <div className='mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
             {menus.map((menu) => (
               <MenuCard
                 key={menu.id}
@@ -31,6 +31,11 @@ export async function MenuSection() {
               />
             ))}
           </div>
+          <ArrowButton
+            href='/menus'
+            children='メニュー一覧'
+            className='mt-6 bg-[#000000aa]'
+          />
         </div>
       </div>
     </section>
