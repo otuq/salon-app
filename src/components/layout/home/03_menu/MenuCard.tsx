@@ -27,7 +27,7 @@ export function MenuCard({
       </CardHeader>
       <CardContent className='text-muted-foreground mx-auto flex flex-col items-center gap-3 leading-6'>
         <MenuImageDialog src={imgSrc} alt={name} />
-        <p>{description}</p>
+        <p className='line-clamp-2 min-h-12'>{description}</p>
       </CardContent>
       <CardFooter className='justify-center'>
         <p className='font-cormorant text-2xl'>¥{price.toLocaleString()}</p>

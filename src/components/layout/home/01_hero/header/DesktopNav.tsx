@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '../../ui/logo'
-import { ArrowButton } from '../../ui/arrow-button'
+import { Logo } from '../../../../ui/logo'
+import { ArrowButton } from '../../../../ui/arrow-button'
 import { handleAnchorClick } from './handleAnchorClick'
 
 export function DesktopNav() {
@@ -66,7 +66,7 @@ export function DesktopNav() {
           </li>
         </ul>
       </nav>
-      <ArrowButton href='/reservation' children='ご予約はこちら' />
+      <ArrowButton href='/reservation/new/' children='ご予約はこちら' />
     </div>
   )
 }

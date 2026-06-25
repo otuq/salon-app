@@ -1,5 +1,5 @@
-import { ArrowButton } from '../../ui/arrow-button'
-import { SectionHeading } from '../home/SectionHeading'
+import { ArrowButton } from '../../../ui/arrow-button'
+import { SectionHeading } from '../../common/SectionHeading'
 
 export function ReservationSection() {
   return (
@@ -13,7 +13,7 @@ export function ReservationSection() {
           />
           <ArrowButton
             variant={'outline'}
-            href='/reservation'
+            href='/reservation/new/'
             children='webで予約'
             className='mt-6'
           />

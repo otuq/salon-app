@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { StaffCard } from './StaffCard'
-import { SectionHeading } from '../home/SectionHeading'
+import { SectionHeading } from '../../common/SectionHeading'
 
 export async function StaffSection() {
   const staff = await prisma.staff.findMany({

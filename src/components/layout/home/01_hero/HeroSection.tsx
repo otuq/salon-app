@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from '@/app/style.module.css'
-import { DesktopNav } from './DesktopNav'
-import { MobileNav } from './MobileNav'
-import { FixedHeader } from './FixedHeader'
+import { DesktopNav } from './header/DesktopNav'
+import { MobileNav } from './header/MobileNav'
+import { FixedHeader } from '../../common/FixedHeader'
 
 export function HeroSection() {
   return (

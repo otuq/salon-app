@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
-import { Sheet, SheetContent, SheetTrigger } from '../../ui/sheet'
-import { ArrowButton } from '../../ui/arrow-button'
-import { Logo } from '../../ui/logo'
+import { Sheet, SheetContent, SheetTrigger } from '../../../../ui/sheet'
+import { ArrowButton } from '../../../../ui/arrow-button'
+import { Logo } from '../../../../ui/logo'
 import { handleAnchorClick } from './handleAnchorClick'
 
 export function MobileNav() {
@@ -11,9 +11,8 @@ export function MobileNav() {
       <div className='flex items-center justify-between border-b border-[#a4a4a4]'>
         <Logo />
         <ArrowButton
-          href='/reservation'
+          href='/reservation/new/'
           children='ご予約はこちら'
-          className='bg-[#000000aa]'
           textClassName=' text-sm'
         />
       </div>

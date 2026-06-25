@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { ArrowButton } from '@/components/ui/arrow-button'
 
 export function ConceptSection() {
   return (

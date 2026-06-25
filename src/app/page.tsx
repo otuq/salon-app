@@ -1,9 +1,9 @@
-import { ConceptSection } from '@/components/layout/concept/ConceptSection'
-import { Footer } from '@/components/layout/home/Footer'
-import { HeroSection } from '@/components/layout/home/HeroSection'
-import { MenuSection } from '@/components/layout/menu/MenuSection'
-import { ReservationSection } from '@/components/layout/reservations/ReservationSection'
-import { StaffSection } from '@/components/layout/staff/StaffSection'
+import { HeroSection } from '@/components/layout/home/01_hero/HeroSection'
+import { ConceptSection } from '@/components/layout/home/02_concept/ConceptSection'
+import { MenuSection } from '@/components/layout/home/03_menu/MenuSection'
+import { StaffSection } from '@/components/layout/home/04_staff/StaffSection'
+import { ReservationSection } from '@/components/layout/home/05_reservation/ReservationSection'
+import { Footer } from '@/components/layout/home/06_footer/Footer'
 
 export default function HomePage() {
   return (

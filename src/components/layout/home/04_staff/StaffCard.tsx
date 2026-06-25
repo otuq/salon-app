@@ -25,7 +25,7 @@ export function StaffCard({ displayName, imageUrl, bio, id }: StaffCardProps) {
           <ArrowButton
             href={`/staff/${id}`}
             children='more'
-            className='mt-auto self-end bg-[#000000aa] py-4 md:px-5'
+            className='mt-auto self-end py-4 md:px-5'
             textClassName='font-cormorant text-[15px] tracking-widest'
           />
         </CardContent>

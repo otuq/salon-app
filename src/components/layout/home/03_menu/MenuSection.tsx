@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { MenuCard } from './MenuCard'
-import { SectionHeading } from '../home/SectionHeading'
+import { SectionHeading } from '../../common/SectionHeading'
 import { ArrowButton } from '@/components/ui/arrow-button'
 
 export async function MenuSection() {
@@ -31,11 +31,7 @@ export async function MenuSection() {
               />
             ))}
           </div>
-          <ArrowButton
-            href='/menus'
-            children='メニュー一覧'
-            className='mt-6 bg-[#000000aa]'
-          />
+          <ArrowButton href='/menus' children='メニュー一覧' className='mt-6' />
         </div>
       </div>
     </section>

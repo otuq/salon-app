@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils'
 
 type Props = {
-  englishTitle: string
-  title: string
+  englishTitle?: string
+  title?: string
   description?: string
   className?: string
 }
